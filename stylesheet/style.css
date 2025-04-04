@@ -1,203 +1,212 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
-  
-  header {
-    background-color: #1560BD;
-    color: white;
-    padding: 1rem 1rem 1rem 1rem;
-    display: flex; 
-    justify-content: flex-start;
-    align-items: center; 
-    position: fixed;
-    width: 100%;
-  }
-  
-  h1 {
-    margin: 0; 
-  }
-  
-  nav {
-    margin-left: auto;
-   
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 1rem;
-    font-size: 1rem; 
-    font-weight: bold; 
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
 
-  }
-  
-  nav a:hover {
-    text-decoration: none; 
-    color: #013A63;
-    transition: 0.3s;
-  }
+header {
+  background-color: #1560BD;
+  color: white;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center; 
+  position: fixed;
+  width: 100%;
+  z-index: 10; /* Ensure header stays on top */
+}
 
-  
-  main {
-    display: flex;
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-  }
-  
-  aside {
-    background-image: url(Assuumption.jpg);
-    width: 200px;
-    padding: 1rem;
-    margin-right: 1rem;
-    border-radius: 5px;
-  }
+h1 {
+  margin: 0; 
+}
 
-  aside h2 {
-    margin-top: 0; 
-    text-align: center;
-  }
+nav {
+  margin-left: auto;
+}
 
-  aside ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    color: aliceblue;
-    font-size: 1rem;
-    font-weight: bold;
-    padding-left: 20px;
-  }
-  
-    aside li {
-        margin-bottom: 0.5rem;
-        padding-right: 20px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 1rem; 
+  font-weight: bold; 
+}
 
-    aside li:hover {
-        color: #e1f03c; 
-        text-decoration: none; 
-        transition: color 0.3s; 
-        cursor: pointer; 
-        transform: scale(1.1);
-    }
+nav a:hover {
+  text-decoration: none; 
+  color: #013A63;
+  transition: 0.3s;
+}
 
+main {
+  display: flex;
+  padding-top: 5rem; /* Adjust padding to account for fixed header */
+  padding-bottom: 1rem;
+}
 
-  section {
-    flex: 1; 
+aside {
+  background-image: url(Assuumption.jpg); /* Assuming Assuumption.jpg is the image file */
+  width: 140px;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  position: fixed; /* Make the sidebar fixed */
+  top: 5rem; /* Position it below the header */
+  height: calc(100vh - 5rem); /* Adjust height to fill the remaining space */
+  z-index: 5; /* Ensure it stays behind the content */
+}
 
-  }
+aside h2 {
+  margin-top: 0; 
+  text-align: center;
+}
 
-  .profile {
-    color: #333; 
-    background-color: #fff; 
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 1rem; 
-  }
+aside ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 20px;
+}
 
-  .profile img {
-    margin: 20px 0;
-    max-width: 200px;
-    height: auto;
-    border-radius: 100px;
-    display: flex;
-    margin: 0 auto;
-    border: #1a0beb solid 3px;
-  }
+aside li {
+  margin-bottom: 0.5rem;
+  padding-right: 20px;
+}
 
-  .profile img:hover {
-    transform: scale(1.1); 
-    transition: 0.2s; 
-  }
-  
-  .main-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-  }
-  
-  .main-card {
-    background-color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .main-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+aside li a { /* Style the links within the aside list */
+  color: aliceblue; /* Match the list color */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
 
-    .main-card:hover {
-        transform: scale(1.05); 
-        transition: 0.2s;
-    }
+aside li a:hover {
+  color: #e1f03c; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+  cursor: pointer; 
+  transform: scale(1.1);
+}
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-  }
+section {
+  flex: 1; 
+  margin-left: 220px; /* Adjust margin to account for sidebar width */
+}
 
-  .skills-card {
-    background-color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .skills-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+.profile {
+  color: #333; 
+  background-color: #fff; 
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 1rem; 
+}
 
-    .skills-card:hover {
-        transform: scale(1.05); 
-        transition: 0.2s;
-    }
+.profile img {
+  margin: 20px 0;
+  max-width: 200px;
+  height: auto;
+  border-radius: 100px;
+  display: flex;
+  margin: 0 auto;
+  border: #1a0beb solid 3px;
+}
 
-  .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-  }
+.profile img:hover {
+  transform: scale(1.1); 
+  transition: 0.2s; 
+}
 
-  .experience-card {
-    background-color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
 
-  .experience-card:hover {
-    transform: scale(1.05); 
-    transition: 0.2s;
-  }
+.main-card {
+  background-color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .experience-card li {
-    list-style: none;
-    color: #333; 
-  }
+.main-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-  .experience-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+.main-card:hover {
+  transform: scale(1.05); 
+  transition: 0.2s;
+}
 
-  footer {
-    background-color: #03045E;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.skills-card {
+  background-color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.skills-card:hover {
+  transform: scale(1.05); 
+  transition: 0.2s;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.experience-card {
+  background-color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover {
+  transform: scale(1.05); 
+  transition: 0.2s;
+}
+
+.experience-card li {
+  list-style: none;
+  color: #333; 
+}
+
+.experience-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #03045E;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
